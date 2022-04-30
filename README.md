@@ -65,6 +65,7 @@ All data files are shared via Dropbox: https://www.dropbox.com/sh/i2gixtsik1qbjx
 9. /data/sars-busters-consolidated/Auto Docking: Contains all files and results from the validation of AI-Bind on COVID-19 related viral and human proteins. 
 10. /data/sars-busters-consolidated/Binding Probability Profile Validation: Contains the files visualizing the active binding sites from auto-dcoking simulations. 
 11. /data/sars-busters/Mol2vec: Pre-trained Mol2vec and ProtVec models are available here. 
+12. /data/sars-busters-consolidated/s4pred: Includes the code and files for predicting the secondary structure of TRIM59. 
 
 ## Code 
 
