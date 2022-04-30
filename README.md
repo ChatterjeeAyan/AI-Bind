@@ -4,6 +4,8 @@
 
 AI-Bind is a deep-learning pipeline that provides interpretable binding predictions for never-before-seen proteins and ligands. AI-Bind is capable of rapid screening of large chemical libraries and guiding computationally expensive auto-docking simulations by prioritising protein-ligand pairs for validation. The pipeline requires as input simple chemical features such as the amino-acid sequence of a protein and the isomeric SMILE of a ligand for binding prediction, which helps to overcome limitations associated with the lack of available 3D protein structures.
 
+Preprint available at: https://arxiv.org/abs/2112.13168 
+
 # Why AI-Bind? 
 
 ## Shortcomings of Existing ML Models in Predicting Protein-Ligand Binding
@@ -22,8 +24,6 @@ We learn that only inductive test performance is a dependable metric for evaluat
 
 AI-Bind pipeline maximises inductive test performance by including network-derived negatives in the training data and introducing unsupervised pre-training for the molecular embeddings. The pipeline is validated via three different neural architectures: VecNet, VAENet, and Siamese model. The best performing architecture in AI-Bind is VecNet, which uses Mol2vec and ProtVec to embed the ligands and the proteins, respectively. These embeddings are fed into a decoder (Multi-layer Perceptron), predicting the binding probability.
 ![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/GitHub_Diagram.png)
-
-Preprint available at: https://arxiv.org/abs/2112.13168
 
 ## Interpretability of AI-Bind and Identifying Active Binding Sites
 
