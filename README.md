@@ -27,10 +27,9 @@ AI-Bind pipeline maximises inductive test performance by including network-deriv
 
 ## Interpretability of AI-Bind and Identifying Active Binding Sites
 
-We mutate certain building blocks (amino acid trigrams) of the protein structure to recognize the regions influencing the binding predictions the most and identify them as the potential binding sites. Below, we validate the AI-Bind predicted active binding sites on the human protein TRIM59 by visualizing the results of the auto-docking simulations and mapping the predicted sites to the amino acid residues where the ligands bind. AI-Bind predicted binding sites can guide the users in creating an optimal grid for the subsequent auto-docking simulations, further reducing simulation time. 
+We mutate certain building blocks (amino acid trigrams) of the protein structure to recognize the regions influencing the binding predictions the most and identify them as the potential binding sites. Below, we validate the AI-Bind predicted active binding sites on the human protein TRIM59 by visualising the results of the auto-docking simulations and mapping the predicted sites to the amino acid residues where the ligands bind. AI-Bind predicted binding sites can guide the users in creating an optimal grid for the auto-docking simulations, further reducing simulation time.
 
 ![trigram-study](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/trigram-study.png)
-
 
 # Setting up AI-Bind and Predicting Protein-Ligand Binding (Guidelines for end users) 
 
