@@ -2,7 +2,7 @@
 
 # AI-Bind
 
-AI-Bind is a deep-learning pipeline that provides interpretable binding predictions for never-before-seen proteins and ligands. AI-Bind is capable of rapid screening of large chemical libraries and guiding computationally expensive auto-docking simulations by prioritising protein-ligand pairs for validation. The pipeline requires as input simple chemical features such as the amino-acid sequence of a protein and the isomeric SMILE of a ligand for binding prediction, which helps to overcome limitations associated with the lack of available 3D protein structures.
+AI-Bind is a deep-learning  pipeline that provides interpretable binding predictions for never-before-seen proteins and ligands. AI-Bind is capable of rapid screening of large chemical libraries and guiding computationally expensive auto-docking simulations by prioritizing protein-ligand pairs for validation. The pipeline requires as input simple chemical features such as the amino-acid sequence of a protein and the isomeric SMILE of a ligand, which helps to overcome limitations associated with the lack of available 3D protein structures.
 
 Preprint available at: https://arxiv.org/abs/2112.13168 
 
@@ -10,7 +10,7 @@ Preprint available at: https://arxiv.org/abs/2112.13168
 
 ## Shortcomings of Existing ML Models in Predicting Protein-Ligand Binding
 
-Our interest in prediction binding for never-before-seen proteins and ligands pushed us in splitting the test performances of the existing machine learning models (e.g., DeepPurpose) into three components:
+Our interest in predicting binding for never-before-seen proteins and ligands pushed us in splitting the test performances of the existing machine learning models (e.g., DeepPurpose) into three components:
 
 (a) Transductive test: When both proteins and ligands from the test dataset are present in the training data,
 
@@ -18,16 +18,16 @@ Our interest in prediction binding for never-before-seen proteins and ligands pu
 
 (c) Inductive test: When both proteins and ligands from the test dataset are absent in the training data.
 
-We learn that only inductive test performance is a dependable metric for evaluating how well a machine learning model has learned the binding from the structural features of proteins and ligands. We note that the majority of the models mainly present transductive test performance, which is related to predicting unseen links in the protein-ligand interaction network used in training. We derived ML models achieve transductive performances comparable to much simpler algorithms (namely, network configuration models), which completely ignore the molecular structures and use the degree information to make binding predictions.
+We learn that only inductive test performance is a dependable metric for evaluating how well a machine learning model has learned binding from the structural features of proteins and ligands. We note that the majority of the models mainly present transductive test performance, which is related to predicting unseen links in the protein-ligand interaction network used in training. We explore how ML models achieve transductive performances comparable to much simpler algorithms (namely, network configuration models), which completely ignore the molecular structures and use the degree information to make binding predictions.
 
 ## What does AI-Bind offer?
 
-AI-Bind pipeline maximises inductive test performance by including network-derived negatives in the training data and introducing unsupervised pre-training for the molecular embeddings. The pipeline is validated via three different neural architectures: VecNet, VAENet, and Siamese model. The best performing architecture in AI-Bind is VecNet, which uses Mol2vec and ProtVec to embed the ligands and the proteins, respectively. These embeddings are fed into a decoder (Multi-layer Perceptron), predicting the binding probability.
+AI-Bind pipeline maximizes inductive test performance by including network-derived negatives in the training data and introducing unsupervised pre-training for the molecular embeddings. The pipeline is validated via three different neural architectures: VecNet, VAENet, and Siamese model. The best performing architecture in AI-Bind is VecNet, which uses Mol2vec and ProtVec to embed proteins and ligands, respectively. These embeddings are fed into a decoder (Multi-layer Perceptron), predicting the binding probability.
 ![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/GitHub_Diagram.png)
 
 ## Interpretability of AI-Bind and Identifying Active Binding Sites
 
-We mutate certain building blocks (amino acid trigrams) of the protein structure to recognize the regions influencing the binding predictions the most and identify them as the potential binding sites. Below, we validate the AI-Bind predicted active binding sites on the human protein TRIM59 by visualising the results of the auto-docking simulations and mapping the predicted sites to the amino acid residues where the ligands bind. AI-Bind predicted binding sites can guide the users in creating an optimal grid for the auto-docking simulations, further reducing simulation time.
+We mutate certain building blocks (amino acid trigrams) of the protein structure to recognize the regions influencing the binding predictions the most and identify them as the potential binding sites. Below, we validate the AI-Bind predicted active binding sites on the human protein TRIM59 by visualising the results of the auto-docking simulations and mapping the predicted sites to the amino acid residues where the ligands bind. AI-Bind predicted binding sites can guide the users in creating an optimal grid for the auto-docking simulations, further reducing simulation time. 
 
 ![trigram-study](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/trigram-study.png)
 
