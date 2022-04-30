@@ -6,10 +6,17 @@ AI-Bind is a deep-learning pipeline that provides interpretable binding predicti
 
 # Why AI-Bind? 
 
-## Shortcomings of Existing ML Models in Predicitng Protein-Ligand Binding
+## Shortcomings of Existing ML Models in Predicting Protein-Ligand Binding
 
-Our interest in poorly annotated proteins and ligands, especially foodborne natural compounds, pushed our research team to evaluate the inductive test performance of several models, i.e., how well the algorithms like DeepPurpose perform when predicting binding for never-before-seen ligands and never-before-seen proteins. Indeed, only inductive test performance is a reliable metric for evaluating how well a model has learned the binding patterns encoded in the structural features describing proteins and ligands and for quantifying its ability to generalize to novel structures. Unfortunately, our literature review showed how many models present mainly transductive test performance, measuring how well the algorithms predict unseen binding between known structures. We analytically derived how excellent performance in transductive tests can be achieved even with simple algorithms that do not require deep learning and completely disregard the structural information characterizing proteins and ligands.
-We present these configuration models, inspired by network science, as the baseline of any ML model implemented in AI-Bind. Their success in transductive test performance is driven by the underlying network structure contributing to the most used training datasets, which present an extremely biased picture of the binding classification task, with structures with a predominantly higher number of positive annotations (binding) compared to negative (non-binding), and vice-versa. In a scenario affected by annotation imbalance, AI models behave similarly to configuration models, disregarding structural information, and failing to perform well in inductive tests.
+Our interest in prediction binding for never-before-seen proteins and ligands pushed us in splitting the test performances of the existing machine learning models (e.g., DeepPurpose) into three components:
+
+(a) Transductive test: When both proteins and ligands from the test dataset are present in the training data,
+
+(b) Semi-inductive test: when only the ligands from the test dataset are present in the training data, and
+
+(c) Inductive test: When both proteins and ligands from the test dataset are absent in the training data.
+
+We learn that only inductive test performance is a dependable metric for evaluating how well a machine learning model has learned the binding from the structural features of proteins and ligands. We note that the majority of the models mainly present transductive test performance, which is related to predicting unseen links in the protein-ligand interaction network used in training. We derived how similar transductive performance can be achieved by simple algorithms (namely, network configuration models) which completely ignore the molecular structures and use the degree information to make binding predictions.
 
 ## What does AI-Bind offer?
 
