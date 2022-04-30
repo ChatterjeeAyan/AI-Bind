@@ -16,14 +16,14 @@ Our interest in prediction binding for never-before-seen proteins and ligands pu
 
 (c) Inductive test: When both proteins and ligands from the test dataset are absent in the training data.
 
-We learn that only inductive test performance is a dependable metric for evaluating how well a machine learning model has learned the binding from the structural features of proteins and ligands. We note that the majority of the models mainly present transductive test performance, which is related to predicting unseen links in the protein-ligand interaction network used in training. We derived how similar transductive performance can be achieved by simple algorithms (namely, network configuration models) which completely ignore the molecular structures and use the degree information to make binding predictions.
+We learn that only inductive test performance is a dependable metric for evaluating how well a machine learning model has learned the binding from the structural features of proteins and ligands. We note that the majority of the models mainly present transductive test performance, which is related to predicting unseen links in the protein-ligand interaction network used in training. We derived ML models achieve transductive performances comparable to much simpler algorithms (namely, network configuration models), which completely ignore the molecular structures and use the degree information to make binding predictions.
 
 ## What does AI-Bind offer?
 
-We developed the AI-Bind pipeline with the goal of maximizing inductive test performance. First, we mitigated annotation imbalance by including in the training set both positive and negative examples for each protein and ligand, balancing the exceeding number of positive annotations in the original data with network-derived negatives, i.e., pairs of proteins and ligands with large shortest path distance on the bipartite network induced by all pairs of proteins and ligands for which we collected binding experimental evidence. This step improves the training phase of all ML models, enhancing their ability to learn structural features. Second, by testing different architectures such as VecNet, VAENet, and Siamese, currently available to the user in different python notebooks, we understood how the best generalizing models are not trained end-to-end, but leverage the vectorial representation capturing the salient structural features of molecules and proteins, as learned on wider and more heterogeneous chemical libraries, not filtered according to the current binding evidence. That is, we introduce unsupervised pre-training of ligand and protein embeddings within the ML architecture.
-
-The best performing architecture in AI-Bind is VecNet, which uses Mol2vec and ProtVec to embed the ligands and the proteins, respectively. These embeddings are fed into a decoder (Multi-layer Perceptron), predicting the binding probability.
+AI-Bind pipeline maximises inductive test performance by including network-derived negatives in the training data and introducing unsupervised pre-training for the molecular embeddings. The pipeline is validated via three different neural architectures: VecNet, VAENet, and Siamese model. The best performing architecture in AI-Bind is VecNet, which uses Mol2vec and ProtVec to embed the ligands and the proteins, respectively. These embeddings are fed into a decoder (Multi-layer Perceptron), predicting the binding probability.
 ![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/GitHub_Diagram.png)
+
+Preprint available at: https://arxiv.org/abs/2112.13168
 
 ## Interpretability of AI-Bind and Identifying Active Binding Sites
 
