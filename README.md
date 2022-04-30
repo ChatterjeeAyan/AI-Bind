@@ -2,7 +2,7 @@
 
 # AI-Bind
 
-AI-Bind is a deep-learning pipeline designed to provide reliable binding predictions for poorly annotated or unseen ligands and proteins. In recent years, deep-learning models have become more popular in drug discovery as they can offer rapid screening for large libraries of proteins and ligands, guiding computationally expensive auto-docking simulations to selected pairs needing more accurate validation. Like many algorithms currently in the scientific literature, AI-bind leverages simple features such as the amino-acid sequence of a protein and the isomeric SMILE of a ligand, known to drive the binding mechanism. The minimal structural information necessary to run the algorithm circumvents the general lack of available protein 3D structures. 
+AI-Bind is a deep-learning pipeline that provides interpretable binding predictions for never-before-seen proteins and ligands. AI-Bind is capable of rapid screening of large chemical libraries and guiding computationally expensive auto-docking simulations by prioritising protein-ligand pairs for validation. The pipeline requires as input simple chemical features such as the amino-acid sequence of a protein and the isomeric SMILE of a ligand for binding prediction, which helps to overcome limitations associated with the lack of available 3D protein structures.
 
 # Why AI-Bind? 
 
