@@ -33,6 +33,18 @@ We mutate certain building blocks (amino acid trigrams) of the protein structure
 
 # Setting up AI-Bind and Predicting Protein-Ligand Binding (Guidelines for end users) 
 
+## Using requirements file:
+
+All Python modules and corresponding versions required for AI-Bind are listed here: requirements.txt
+
+Use pip install -r requirements.txt to install the related packages. 
+
+rdkit version used in AI-Bind: '2017.09.1' (For installation, check the documentation here: https://www.rdkit.org/docs/Install.html)
+
+Download and save the data files under /data. Dropbox link: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6kAMLZ3vl-cRfjo6Cn5a?dl=0
+
+## Alternatively: Installation using Docker:
+
 1. Download the docker file named "Predictions.dockerfile".
 2. On your terminal, move to the directory with the dockerfile and run : 
 	docker build -t aibindpred -f ./Predictions.dockerfile ./
