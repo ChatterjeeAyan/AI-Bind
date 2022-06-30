@@ -61,9 +61,11 @@ You may clone the git repository inside the container, or attach your local volu
 5. To run a Jupyter notebook instance inside the container, run :
 	jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root
 The steps above will install all necessary packages and create the environment to run binding predictions using AI-Bind.
-6. Organize your data file in a dataframe format with the colulmns 'InChiKey', 'SMILE' and 'target_aa_code'. Save this dataframe in a .csv file. 
-7. Run the notebook titled VecNet-User-Frontend.ipynb to make the binding predictions. Predicted binding probabilities will be available under the column header 'Averaged Predictions'.
 
+## Running predictions from the frontend
+
+1. Organize your data file in a dataframe format with the colulmns 'InChiKey', 'SMILE' and 'target_aa_code'. Save this dataframe in a .csv file. 
+2. Run the notebook titled VecNet-User-Frontend.ipynb to make the binding predictions. Predicted binding probabilities will be available under the column header 'Averaged Predictions'.
 
 # Code and Data
 
