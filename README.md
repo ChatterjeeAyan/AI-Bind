@@ -35,7 +35,7 @@ We mutate certain building blocks (amino acid trigrams) of the protein structure
 
 ## Hardware set-up for AI-Bind
 
-We trained and tested all our models via a server on the Google Cloud Platform with a Intel Broadwell CPU and NVIDIA Tesla T4 GPU(s). Python version used in AI-Bind is 3.6.6.
+We trained and tested all our models via a server on the Google Cloud Platform with a Intel Broadwell CPU and NVIDIA Tesla T4 GPU(s). Python version used in AI-Bind is 3.6.6. CUDA version used is 9.0.
 
 ## Using requirements file
 
