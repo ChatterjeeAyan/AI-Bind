@@ -77,7 +77,7 @@ The steps above will install all necessary packages and create the environment t
 
 ## Data Files
 
-All data files are shared via Dropbox: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6kAMLZ3vl-cRfjo6Cn5a?dl=0
+All data files are available here: https://zenodo.org/record/7226641
 
 1. /data/sars-busters-consolidated/Database files: Contains protein-ligand binding data derived from DrugBank, BindingDB and DTC (Drug Target Commons). 
 2. /data/sars-busters-consolidated/chemicals: Contains ligands used in training and testing of AI-Bind with embeddings.
