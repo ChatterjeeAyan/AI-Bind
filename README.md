@@ -49,7 +49,7 @@ Make sure the VecNet-User-Frontend.ipynb notebook and the three files in the AIB
 
 Download and save the data files under /data. Download link: https://zenodo.org/record/7226641
 
-AI-Bin data is also available via Dropbox and OneDrive. 
+AI-Bind data is also available via Dropbox and OneDrive. 
 
 Dropbox link: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6kAMLZ3vl-cRfjo6Cn5a?dl=0. 
 
